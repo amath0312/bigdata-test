@@ -20,7 +20,7 @@ class Requester:
     def get_location(self, lat, lng):
         queryStr = '/geocoder/v2/?coordtype=wgs84ll&location=%s&output=json&ak=%s' % (lat+','+lng, config.baidu_ak)
         data = json.loads(urllib.request.urlopen(self.get_request_url(queryStr,config.baidu_sk)).read().decode('utf8'))
-        print(data)
+        return data['result']['formatted_address']
 
 
 if __name__ == '__main__':
