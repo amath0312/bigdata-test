@@ -10,8 +10,11 @@ def index():
     client_ip = request.remote_addr
     print('============================',client_ip)
     lat,lng = JCloudGPS.Requester().get_gps(client_ip)
-    address = BaiduMapLocation.Requester().get_location(lat,lng)
-    return render_template('index.html', info=client_ip, address=lat+','+lng+': '+address)
+    if lat == None:
+        address = 'unknown...'
+    else:
+        address = BaiduMapLocation.Requester().get_location(lat,lng)
+    return render_template('index.html', info=client_ip, address=''+lat+','+lng+': '+address)
 
 
 if __name__ == '__main__':

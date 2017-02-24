@@ -11,7 +11,7 @@ class Requester:
         req_url = self.root_url %(ip, config.jcloud_key)
         data = json.loads(urllib.request.urlopen(req_url).read().decode('utf8'))
         print('from jcloud:',data)
-        if str(data['code']) == '10000':
+        if str(data['code']) == '10000' and str(data['result']['code']) == '200':
             #success
             lat = str(data['result']['location']['latitude'])
             lng = str(data['result']['location']['longitude'])
