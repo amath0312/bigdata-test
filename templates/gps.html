@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <p>your ip: {{info}}</p>
+        <p>your address: </p>
+        <ul>
+            {% for addr in addresses %}
+            <li>{{addr}}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
