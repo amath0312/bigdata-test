@@ -25,7 +25,7 @@ def gps():
     print('============================',client_ip)
     #client_ip = '111.198.66.136'
     addresses = Hao7188Location.Requester().get_addr(client_ip)
-    print(client_ip+'/r/n'+addresses)
+    print(client_ip+'/r/n'+str(addresses))
     return render_template('gps.html', info=client_ip, addresses=addresses)
 
 
