@@ -1,0 +1,5 @@
+
+jcloud_key="5d56f7907fb12e78ea063302994a18c7"
+baidu_ak="eb8Z1H3G5KTMD6MHXwnr3DC07EfEM6Ah"
+baidu_sk="9jEkfC8Eh8nTGPh89ooKVVm5DS1k0W6b"
+amap_key='51c0c67ff1ef9d9a2a5213e179421661'
