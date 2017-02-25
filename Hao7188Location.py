@@ -23,5 +23,5 @@ class Requester:
 
 if __name__ == '__main__':
     req = Requester()
-    addresses = req.get_addr('111.198.66.136')
+    addresses = req.get_addr('124.93.95.3')
     print(addresses)
